@@ -1,10 +1,10 @@
 <?php
 
-class _404
+class _404 extends Controller
 {
     public function index()
     {
-        echo 'Controller Not Found';
+        $this->view('_404');
     }
-    
+
 }
