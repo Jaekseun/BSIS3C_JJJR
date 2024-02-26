@@ -8,7 +8,7 @@
      <body>
      
      <h1>
-         HomePage
+         Home Page
      </h1>  
      
      </body>
