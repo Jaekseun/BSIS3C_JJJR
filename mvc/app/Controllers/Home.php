@@ -4,11 +4,14 @@ class Home extends Controller
 {
     public function index()
     {
-        $model = new Model();
-        $arr['firstname'] = 'Marvic Joshua';
-        $arr2['lastname'] = 'Santos';
-        $data =$model->where($arr, $arr2);
+        $user = new User();
+        $data = $user->findAll();
         show($data);
+
+        $product = new Product();
+        $data = $product->findAll();
+        show($data);
+
         $this->view('home');
     }
 }

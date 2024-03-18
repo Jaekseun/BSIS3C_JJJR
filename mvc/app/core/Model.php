@@ -2,6 +2,13 @@
 
 class Model extends Database
 {
+    public function __construct()
+    {
+        if (!property_exists($this, 'table'))
+        {
+            $this->table = strtolower($this::class) . 's';
+        }
+    }
     public function findAll()
     {
         $query = "select * from users";
