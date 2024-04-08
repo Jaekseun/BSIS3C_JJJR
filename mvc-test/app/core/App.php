@@ -3,32 +3,6 @@
 class App
 {
 
-<<<<<<< HEAD
-    protected $controller = 'Home';
-
-    public function __construct()
-    {
-        $url = $this->splitURL();
-        
-        if(isset($url[0]))
-        {
-            if(file_exists('../app/controllers/'. ucfirst($url[0]) .'.php'))
-            {
-                $this->controller = $url[0];
-                unset($url[0]);
-            }
-        }
-    }
-    
-    private function splitURL()
-    {
-        if(isset($_GET['url']))
-        {
-            $url = explode("/", trim($_GET['url'], "/"));
-            return $url;
-        }
-    }
-=======
 protected $controller = 'Home';
 protected $method = 'index';
 protected $params =[];
@@ -74,6 +48,5 @@ $url = explode("/", trim($_GET['url'], "/"));
 return $url;
 }
 }
->>>>>>> 4ad4c6a907b7ef46749ca083ed726dda04f85c36
 
 }
