@@ -29,7 +29,11 @@ class Model extends Database
         
         $keys = array_keys($data);
         $keys_not = array_keys($data_not);
+<<<<<<< HEAD
         $query = "select * from $this->table";
+=======
+        $query = "select * from $this->table where";
+>>>>>>> 23f6356c2bd39da251b78c9df2463a13e2522941
 
 
         foreach ($keys as $key)
@@ -76,7 +80,10 @@ class Model extends Database
 
     public function update($id, $data, $column = 'id')
     {
+<<<<<<< HEAD
         // update users set firstname = :firstname
+=======
+>>>>>>> 23f6356c2bd39da251b78c9df2463a13e2522941
         $keys = array_keys($data);
         $query = "update $this->table set ";
 
@@ -86,7 +93,11 @@ class Model extends Database
         }
 
         $query = trim($query, ", ");
+<<<<<<< HEAD
         $query = " where $column = :$column";
+=======
+        $query .= " where $column = :$column";
+>>>>>>> 23f6356c2bd39da251b78c9df2463a13e2522941
 
         $data[$column] = $id;
         $this->query($query, $data);
