@@ -1,6 +1,5 @@
 <?php
 
-<<<<<<< HEAD
 class Database
 {
     private function connect()
@@ -11,7 +10,7 @@ class Database
     }
 
     public function query($query, $data = [])
-=======
+
 Class Database
 {
     public function connect()
@@ -22,26 +21,23 @@ Class Database
     }
 
     public function query($query, $data =[])
->>>>>>> 23f6356c2bd39da251b78c9df2463a13e2522941
     {
         $con = $this->connect();
         $stm = $con->prepare($query);
 
         $check = $stm->execute($data);
 
-<<<<<<< HEAD
         if ($check)
         {
             $result = $stm->fetchAll(PDO::FETCH_OBJ);
 
             if (is_array($result) && count($result) > 0)
-=======
+
         if($check)
         {
             $result = $stm ->fetchAll(PDO::FETCH_OBJ);
 
             if(is_array($result)&& count($result) > 0)
->>>>>>> 23f6356c2bd39da251b78c9df2463a13e2522941
             {
                 return $result;
             }
