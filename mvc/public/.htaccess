@@ -4,7 +4,11 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
 =======
 RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
 >>>>>>> 4ad4c6a907b7ef46749ca083ed726dda04f85c36
+=======
+RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
+>>>>>>> 38a97c18948225b0a25081d55c550a321981eeaa
