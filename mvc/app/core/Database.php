@@ -2,11 +2,11 @@
 
 class Database
 {
-    private function connect()
+public function connect()
     {
-        $string = "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME;
-        $con = new PDO($string, DB_USER, DB_PASS);
-        return $con;
+    $string ="mysql:host=" . DB_HOST . "localhost;dbname=" . DB_NAME;
+    $con = new PDO($string, DB_USER, DB_PASS);
+    return $con;
     }
 
     public function query($query, $data = [])
@@ -16,15 +16,15 @@ class Database
 
         $check = $stm->execute($data);
 
-        if ($check)
+        if($check)
         {
-            $result = $stm->fetchAll(PDO::FETCH_OBJ);
+            $result =$stm->fetchAll(PDO::FETCH_OBJ);
 
-            if (is_array($result) && count($result) > 0)
+            if (is_array($result)&& count ($result) > 0)
             {
                 return $result;
             }
         }
-        return false;
+        return false; 
     }
 }
