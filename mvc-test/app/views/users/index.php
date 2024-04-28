@@ -5,7 +5,4 @@
 </div>
 
 
-
-
-
 <?php include PATH."partials/footer.php"?>
